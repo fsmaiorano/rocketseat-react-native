@@ -19,8 +19,8 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Text style={styles.header}>GoNative App</Text>
-      <ListPost posts={this.state.posts} />
+        <Text style={styles.header}>GoNative App</Text>
+        <ListPost posts={this.state.posts} />
       </View >
     )
   }
@@ -29,7 +29,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: bgColor
+    backgroundColor: bgColor,
   },
   header: {
     padding: 20,
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: headers,
     fontWeight: 'bold',
+    padding: 20,
   }
 })
 
