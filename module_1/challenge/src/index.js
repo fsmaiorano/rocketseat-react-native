@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import 'config/DevToolsConfig';
 import 'config/ReactotronConfig';
-import { bgColor } from 'utils/colors';
+import { bgPost, bgColor, headers } from 'utils/colors';
 
 import ListPost from 'components/post/listPost';
 class App extends Component {
@@ -18,11 +18,28 @@ class App extends Component {
 
   render() {
     return (
-       <View style={{ flex: 1, backgroundColor: bgColor }}>
-        <ListPost posts={this.state.posts} />
-      </View>
+      <View style={styles.container}>
+      <Text style={styles.header}>GoNative App</Text>
+      <ListPost posts={this.state.posts} />
+      </View >
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: bgColor
+  },
+  header: {
+    padding: 20,
+    backgroundColor: bgPost,
+    alignSelf: 'stretch',
+    textAlign: 'center',
+    fontSize: 20,
+    color: headers,
+    fontWeight: 'bold',
+  }
+})
 
 export default App;

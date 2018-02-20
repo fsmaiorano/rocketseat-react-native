@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { bgPost, headers, postAuthor, postContent } from 'utils/colors';
+import { bgPost, headers, postAuthor, postContent, divisor } from 'utils/colors';
 
 const Post = props => (
   <View style={styles.postItem}>
@@ -13,8 +13,8 @@ const Post = props => (
 
 const styles = StyleSheet.create({
   postItem: {
-    marginLeft: 15,
-    marginRight: 15,
+    marginLeft: 20,
+    marginRight: 20,
     marginTop: 20,
     borderRadius: 10,
     backgroundColor: bgPost,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   divisor: {
-    borderColor: postAuthor,
+    borderColor: divisor,
     borderBottomWidth: 1,
     marginLeft: 20,
     marginRight: 20,
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     color: postContent,
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 10,
+    marginTop: 20,
     fontSize: 15,
   }
 });
