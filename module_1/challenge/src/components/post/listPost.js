@@ -4,6 +4,16 @@ import { ScrollView, StyleSheet, Platform } from 'react-native';
 
 import Post from './post';
 
+const ListPosts = props => (
+  <ScrollView>
+    {
+      props.posts.map(post => (
+        <Post style={styles.postItem} key={post.id} post={post} />
+      ))
+    }
+  </ScrollView>
+);
+
 const styles = StyleSheet.create({
   postItem: {
     backgroundColor: bgPost,
@@ -21,15 +31,5 @@ const styles = StyleSheet.create({
     },
   },
 });
-
-const ListPosts = () => (
-  <ScrollView>
-    {
-      this.props.posts.map(post => (
-        <Post style={styles.postItem} key={post.id} post={post} />
-      ))
-    }
-  </ScrollView>
-);
 
 export default ListPosts;
