@@ -3,7 +3,7 @@ import { View, Text, Platform, StyleSheet } from 'react-native';
 
 const Post = (props) => (
   <View>
-      <Text>{props.post.id}</Text>
+      <Text>{props.post.title}</Text>
       <Text>{props.post.author}</Text>
       <Text>{props.post.content}</Text>
   </View>
