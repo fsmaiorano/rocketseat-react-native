@@ -1,20 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { bgPost } from 'utils/colors';
+import { bgPost, headers, postAuthor, postContent } from 'utils/colors';
 
 const Post = props => (
   <View style={styles.postItem}>
-    <Text>{props.post.title}</Text>
-    <Text>{props.post.author}</Text>
-    <Text>{props.post.content}</Text>
+    <Text style={styles.postTitle}>{props.post.title}</Text>
+    <Text style={styles.postAuthor}>{props.post.author}</Text>
+    <Text style={styles.divisor}></Text>
+    <Text style={styles.postContent}>{props.post.content}</Text>
   </View>
 );
 
 const styles = StyleSheet.create({
   postItem: {
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 50,
+    marginLeft: 15,
+    marginRight: 15,
+    marginTop: 20,
     borderRadius: 10,
     backgroundColor: bgPost,
     justifyContent: 'center',
@@ -25,6 +26,33 @@ const styles = StyleSheet.create({
       width: 0,
       height: 3,
     },
+  },
+  postTitle: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    color: headers,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  postAuthor: {
+    color: postAuthor,
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 4,
+    fontSize: 15,
+  },
+  divisor: {
+    borderColor: postAuthor,
+    borderBottomWidth: 1,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  postContent: {
+    color: postContent,
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10,
+    fontSize: 15,
   }
 });
 
