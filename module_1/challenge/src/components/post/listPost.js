@@ -1,13 +1,21 @@
-import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 
 import Post from './post';
 
-const ListPost = () => (
+const ListPosts = (props) => (
   <ScrollView>
-    <Text>ListPost</Text>
-    <Post />
+    {
+      props.posts.map((post) => (
+        <Post key={post.id} post={post} />
+      ))
+    }
   </ScrollView>
 )
 
-export default ListPost;
+const styles = StyleSheet.create({
+
+});
+
+
+export default ListPosts;

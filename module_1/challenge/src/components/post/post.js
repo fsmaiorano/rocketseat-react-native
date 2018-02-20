@@ -1,10 +1,16 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, Platform, StyleSheet } from 'react-native';
 
-const Post = () => (
+const Post = (props) => (
   <View>
-    <Text>Post</Text>
+      <Text>{props.post.id}</Text>
+      <Text>{props.post.author}</Text>
+      <Text>{props.post.content}</Text>
   </View>
-)
+);
 
-export default Post;
+const styles = StyleSheet.create({
+
+});
+
+ export default Post;
