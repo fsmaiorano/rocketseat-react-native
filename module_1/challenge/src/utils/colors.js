@@ -1,4 +1,4 @@
-export const bgColor = '#EE777';
+export const bgColor = '#EE7777';
 export const bgPost = '#FFFFFF';
 export const headers = '#333333';
 export const postAuthor = '#999999';
